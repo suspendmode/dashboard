@@ -1,0 +1,54 @@
+{
+    "name": "suspendmode/dashboard",
+    "description": "Laravel dashboard. Laravel 8, Blade, AlpineJS, TailwindCSS",
+    "keywords": [
+        "suspendmode",
+        "dashboard"
+    ],
+    "homepage": "https://github.com/suspendmode/dashboard",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Piotr Kucharski",
+            "email": "suspendmode@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Suspendmode\\Dashboard\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Suspendmode\\Dashboard\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Suspendmode\\Dashboard\\DashboardServiceProvider"
+            ],
+            "aliases": {
+                "Dashboard": "Suspendmode\\Dashboard\\DashboardFacade"
+            }
+        }
+    }
+}
